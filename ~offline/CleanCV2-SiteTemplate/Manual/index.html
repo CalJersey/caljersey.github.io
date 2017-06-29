@@ -1,0 +1,227 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>CleanCV2 Documentation Template</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;CleanCV2&rdquo; Documentation by &ldquo;Invbit&rdquo; v1.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;CleanCV2&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 25/4/2011<br>
+					By: Invbit<br>
+					Email: <a href="mailto:info@invbit.com">info@invbit.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/Invbit">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+			<li><a href="#javascript">JavaScript</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a href="#toc">top</a></h3>
+		<p>This theme is a liquid layout with two columns. The header is divided in two sections, the div with id "contmenu" contains the navigation, and the div with id "header" contents the other header information. All of the information within the main content area (#main_page_posts) is nested within a div with an id of "post". The sidebar's (#contleft) content is within a div with an id of "left". The general template structure is the same throughout the template. Here is the general structure.</p>
+		
+		<img src="assets/images/htmlstructure.png" alt="HTML Structure" />
+		
+		<p>The index.html file contains all code, so if you wish to modify some text you can do it here. 
+        </p>
+        
+        <p>To modify the main photo you would modify the following:</p>
+        
+        <img src="assets/images/htmlMainPhoto.png" alt="HTML Structure" />
+        
+        <p>To modify the header content, there are two sections so you would modify the following:</p>
+        
+        <img src="assets/images/htmlHeaderContent.png" alt="HTML Structure" />   
+        
+        <p>To modify the portfolio content, you can change image at "sponsorFlip" class and change description and url at "sponsorDescription" class and "sponsorURL" class respectively.</p>                 
+        
+        <p>If you would like to edit the color, font, or style of any elements in one of these columns, you would do the following:</p>
+
+<pre>	p {
+	padding:5px 0px 10px 0;
+	line-height:17px;
+	color:#bdb49f; /*Color as you wish*/
+}
+</pre>
+
+		<p>If you find that your new style is not overriding, it is most likely because of a specificity problem. Scroll down in your CSS file and make sure that there isn't a similar style that has more weight.</p>
+
+
+		<p>So, to ensure that your new styles are applied, make sure that they carry enough "weight" and that there isn't a style lower in the CSS file that is being applied after yours.</p> 
+
+		<hr>
+
+		<h3 id="cssFiles"><strong>B) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+
+		<p>I'm using two CSS files in this theme. The first one is a main CSS file. This file contains some general styling, such as anchor tag colors, font-sizes, etc. Keep in mind, that these values might be overridden somewhere else in the file. The second file contains some tricks for IE. Furthermore there are two CSS files for the javascript plugins (colorbox.css and styles.css), I recommend not modify these files.</p> 
+
+		<p>The main file (style.css) contains all of the specific stylings for the page. The file is separated into sections using:</p>  
+
+Main section (the first elements).       
+<pre>
+ You can change the color, padding, font, width page in this section.
+ If you wish to change font color you can edit:
+p {
+	padding:5px 0px 10px 0;
+	line-height:17px;
+	color:#bdb49f; /*Color as you wish*/
+}
+
+ If you wish to change paragraph padding you can edit:
+p {
+	padding:5px 0px 10px 0; /*Padding as you wish*/
+	line-height:17px;
+	color:#bdb49f; 
+} 
+
+ In case to change width page, you need to edit:
+ 
+ .wrap {
+	width:850px; /*Width as you wish*/
+	margin:0 auto;
+}
+
+.contmenu{
+	width:850px; /*Width as you wish*/
+	margin:auto;
+	background:transparent url(../images/imgsup.png) no-repeat 0 0;
+	height:69px;
+	}
+    
+.header {
+	width:850px; /*Width as you wish*/
+	margin:11px auto;
+	background:transparent url(../images/fondocab.png) no-repeat 0 0;
+	height:152px;
+	position:relative;
+	overflow:hidden;
+	}
+	
+.cont2 {
+	width:850px; /*Width as you wish*/
+	margin:0 auto;
+	background:transparent url(../images/fondocab.png) no-repeat 0 0;
+	}    
+ 
+</pre>
+
+
+<pre>	/* === Text elements === */
+
+	In this section you can modify the header tags attributes.
+
+	/* === Navigation === */
+	
+	In this section you can modify the navigation menu attributes.
+	
+	/* === Social === */
+	
+	In this section you can modify the social bookmarks attributes.
+    
+	/* === Header Content === */
+    
+	In this section you can modify the header attributes.
+	
+	/* === Column left === */
+	
+	In this section you can modify the column left attributes.
+    
+	/* === Column right === */
+	
+	In this section you can modify the column right attributes.
+    
+	/* === Footer === */
+	
+	In this section you can modify the footer attributes.        
+
+</pre>
+		
+		<p>If you would like to edit a specific section of the site, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited.</p> 
+
+		<hr>
+		
+		<h3 id="javascript"><strong>C) JavaScript</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This theme imports nine Javascript files.</p>
+		
+		<ol>
+			<li>jQuery</li>
+			<li>jQuery UI</li>            
+			<li>jQuery Flip</li>
+			<li>jQuery Colorbox</li>
+			<li>Cufon</li>
+			<li>Cufon Opificio_400 Font</li>
+			<li>Cufon Journal_400 Font</li>
+			<li>Cufon Yanone_Kaffeesatz_400 Font</li>
+			<li>Custom Scripts</li>
+		</ol>
+		  
+		<ol>
+			<li>jQuery is a Javascript library that greatly reduces the amount of code that you must write.</li>
+			<li>jQuery UI provides abstractions for low-level interaction and animation, advanced effects and high-level, themeable widgets, built on top of the jQuery JavaScript Library, that you can use to build highly interactive web applications. </li>
+			<li>jQuery Flip is a jQuery plugin to apply flip animation to any element.</li>
+			<li>jQuery ColorBox is a light-weight, customizable lightbox plugin for jQuery 1.3, 1.4, and 1.5.</li>
+			<li>Cufon: Fast text replacement with canvas and VML</li>
+            <li>The custom scripts animate the social buttons and help to flip portfolio elements.</li>
+		</ol>
+		
+		
+		<hr>
+		
+		<h3 id="credits"><strong>E) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+		<p>I've used the following images, icons or other files as listed.
+		
+		<ul>
+			<li>jQuery UI <a href="http://jqueryui.com/">http://jqueryui.com/</a></li>
+			<li>jQuery Flip <a href="http://lab.smashup.it/flip/">http://lab.smashup.it/flip/</a></li>
+			<li>jQuery Colorbox <a href="http://colorpowered.com/colorbox/">http://colorpowered.com/colorbox/</a></li>
+			<li>Cufon <a href="http://cufon.shoqolate.com/generate/">http://cufon.shoqolate.com/generate/</a></li>
+			<li>Cufon Fonts <a href="http://www.dafont.com/">http://www.dafont.com/</a></li>
+		</ul>
+		
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>Invbit</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>
